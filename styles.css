@@ -1,0 +1,176 @@
+/* CSS general y personalizado */
+
+header {
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: rgb(155, 175, 216);
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+@keyframes aparecer {
+    to {
+        width: 100%;
+    }
+}
+
+.bg-custom-black {
+    background-color: #000000 !important;
+}
+
+.navbar {
+    height: 110px;
+}
+
+.navbar-brand img {
+    max-height: 100px;
+}
+
+nav.navbar .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    padding-right: 30px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
+section {
+    margin-bottom: 10%;
+}
+
+h1, h2{
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #535353f1;
+    margin-top: 3%;
+    margin-bottom: 30px;
+}
+
+#carouselSection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-inner {
+    border-radius: 10px; /* Ajusta el radio de los bordes según tus necesidades */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    max-width: 80%;
+    width: auto;
+    margin: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px; /* Ajusta el ancho según tus necesidades */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Fondo negro para los íconos */
+    padding: 10px; /* Añade padding para aumentar el área de clic */
+    border-radius: 50%; /* Bordes redondeados */
+}
+
+/* Estilo adicional para los controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border-radius: 0 3px 3px 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-indicators li {
+    background-color: #000; /* Fondo negro para los indicadores */
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #000000be;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact {
+    font-size: 26px;
+}
+
+a {
+    color: #0e2d2c;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #48605fdb;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+}
+
+.imgseguros {
+    width: calc(50% - 10px); /* Ajusta el tamaño de las imágenes */
+    /* La resta de 10px es para tener en cuenta el espacio entre las imágenes */
+    object-fit: cover; /* Ajusta el tamaño de la imagen sin distorsionarla */
+}
+.h4seguros {
+    margin: 30px;
+}
+iframe { 
+    width: 80%;
+    height: 50%;
+}
+.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+.btn-primary:hover {
+    background-color: #00000085;
+    border-color: #000;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        height: auto;
+    }
+    .navbar-brand img {
+        max-width: 55%;
+        height: auto;
+    }
+    section {
+        margin-bottom: 50%;
+    }
+    #banner img {
+        max-width: 100%;
+        height: auto;
+    }
+}
