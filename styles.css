@@ -137,14 +137,7 @@ a:hover {
     justify-content: space-between; /* Distribuye el espacio entre las imágenes */
 }
 
-.imgseguros {
-    width: calc(50% - 10px); /* Ajusta el tamaño de las imágenes */
-    /* La resta de 10px es para tener en cuenta el espacio entre las imágenes */
-    object-fit: cover; /* Ajusta el tamaño de la imagen sin distorsionarla */
-}
-.h4seguros {
-    margin: 30px;
-}
+
 iframe { 
     width: 80%;
     height: 50%;
