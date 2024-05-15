@@ -173,4 +173,12 @@ iframe {
         max-width: 100%;
         height: auto;
     }
+    iframe {
+        width: 100%; /* Establece el ancho completo para el iframe en dispositivos móviles */
+        height: auto; /* Cambia la altura a automática para mantener la proporción */
+    }
+
+    #contact form {
+        margin-top: 20px; /* Espacio superior para separar el formulario del mapa */
+    }
 }
