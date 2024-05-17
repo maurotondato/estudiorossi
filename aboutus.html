@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="rossi, abogado, estudio, juridico, penales, accidentes, laborales, brandsen, la plata, judicial, comercial, contratos, seguros">
-    <title>Estudio Rossi - Sobre nosotros</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="images/favicon.ICO" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="rossi, abogado, estudio, juridico, penales, accidentes, laborales, brandsen, la plata, judicial, comercial, contratos, seguros">
+        <title> Estudio Rossi - Inicio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="images/favicon.ICO" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
 <body>
-    <header>
+    <header class="header-hidden">
         <nav class="navbar navbar-expand-lg navbar-dark bg-custom-black">
             <div class="container">
                 <a class="navbar-brand" href="index.html"><img src="images/logo.jpeg" alt="Logo de la Tienda"></a>
@@ -29,40 +31,44 @@
         </nav>
     </header>
 
-    <section id="aboutusid">
+    <section id="aboutusid" class="section-about">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 order-md-2">
-                    <img class="aboutusimg img-fluid rounded shadow" src="images/aboutus.png" alt="About us">
+                <div class="col-lg-6">
+                    <div class="aboutus-text">
+                        <h1 class="animate__animated animate__fadeInUp">Conoce al Equipo</h1>
+                        <p class="animate__animated animate__fadeInUp">
+                            En el Estudio Rossi, nos enorgullece presentarnos como un equipo dinámico y comprometido de profesionales del derecho. Con una pasión compartida por la justicia y una dedicación inquebrantable hacia nuestros clientes, nos esforzamos por ofrecer soluciones legales sólidas y personalizadas en cada caso que abordamos.
+                        </p>
+                        <p class="animate__animated animate__fadeInUp">
+                            Nuestro estudio está formado por cinco jóvenes abogados: Augusto Rossi, Emilio Rossi, Lucía Rossi, Micaela Noirat y Jimena Alcuaz. Estamos unidos por nuestra determinación para defender los derechos y resolver los problemas legales de nuestros clientes con eficacia y dedicación.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-md-6 order-md-1">
-                    <h1 class="text-center animate-title">Acerca de nosotros</h1>
-                    <p class="lead animate-text">
-                        ¡Bienvenidos al <strong>Estudio Rossi</strong>!
-                    </p>
-                    <p class="animate-text">
-                        En el <strong>Estudio Rossi</strong>, nos enorgullece presentarnos como un equipo dinámico y comprometido de profesionales del derecho. Con una pasión compartida por la justicia y una dedicación inquebrantable hacia nuestros clientes, nos esforzamos por ofrecer soluciones legales sólidas y personalizadas en cada caso que abordamos.
-                    </p>
-                    <p class="animate-text">
-                        Nuestro estudio está formado por cinco jóvenes abogados: Augusto Rossi, Emilio Rossi, Lucía Rossi, Micaela Noirat y Jimena Alcuaz. Estamos unidos por nuestra determinación para defender los derechos y resolver los problemas legales de nuestros clientes con eficacia y dedicación.
-                    </p>
-                    <p class="animate-text">
-                        En el <strong>Estudio Rossi</strong>, creemos en la importancia de establecer relaciones sólidas con nuestros clientes. Nos esforzamos por comprender sus necesidades individuales y brindarles un apoyo legal cercano y personalizado en cada paso del camino. Nuestra prioridad es asegurarnos de que cada cliente se sienta escuchado, comprendido y representado de manera efectiva en el sistema legal.
-                    </p>
-                    <p class="animate-text">
-                        Ya sea que esté enfrentando un desafío legal complejo o simplemente necesite orientación legal, estamos aquí para ayudarlo. Nuestro compromiso es trabajar incansablemente en su nombre, buscando siempre alcanzar los mejores resultados posibles.
-                    </p>
-                    <p class="animate-text">
-                        En el <strong>Estudio Rossi</strong>, no solo somos abogados, somos aliados en su búsqueda de justicia.
-                    </p>
-                    <p class="animate-text">
-                        ¡Gracias por confiar en nosotros!
-                    </p>
+                <div class="col-lg-6">
+                    <div class="aboutus-image">
+                        <img class="img-fluid rounded-circle animate__animated animate__fadeInRight" src="images/aboutus.jpeg" alt="About us">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <div class="floating-buttons">
+        <a href="mailto:estudiorossi.brandsen@gmail.com" class="floating-button email" target="_blank">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip">Email</span>
+        </a>
+        <a href="https://www.instagram.com/estudiorossi" class="floating-button instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span class="tooltip">Instagram</span>
+        </a>
+        <a href="https://wa.me/+5492223527040" class="floating-button whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
+    </div>
+
     <footer id="footerid" class="py-4 text-white">
         <div class="container text-center">
             <p>&copy; 2024 Estudio Rossi</p>
@@ -72,6 +78,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

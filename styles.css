@@ -1,7 +1,22 @@
+/* Importando la fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 /* Estilos para el encabezado */
 header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    transition: transform 0.3s ease; /* Agregamos una transición para una animación suave */
+    z-index: 1000; /* Asegúrate de que el encabezado esté en la capa superior */
 }
+/* Estilos para la sección debajo del encabezado */
+.content-wrap {
+    padding-top: 110px; /* Ajustamos el padding-top para que coincida con la altura del encabezado */
+}
+
+
 
 header::after {
     content: "";
@@ -43,9 +58,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'arial', sans-serif; /* Cambio de fuente */
+    font-family: 'Roboto', sans-serif; /* Cambio de fuente */
 }
-/* Animations for titles and text */
+/* Estilos para el contenido de las secciones */
+section {
+    margin-top: 110px; /* Ajusta el valor según sea necesario */
+}
+/* Animaciones para títulos y texto */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -72,13 +91,12 @@ body {
 
 /* Estilos para los títulos */
 h1, h2 {
-    font-family: 'Arial', sans-serif; /* Cambio de fuente */
+    font-family: 'Roboto', sans-serif; /* Cambio de fuente */
     color: #000000f1;
     margin-top: 3%;
     margin-bottom: 30px;
 }
 
-/* Estilos para la sección del héroe */
 /* Estilos para la sección del héroe */
 .hero-section {
     background: url('images/hero-bg.jpg') no-repeat center center/cover;
@@ -101,19 +119,19 @@ h1, h2 {
     transform: translateY(50px);
     transition: opacity 2s ease, transform 3s ease;
 }
+
 .hero-content h3 {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1.5s ease, transform 1s ease;
 }
+
 .hero-content h1.loaded, .hero-content h3.loaded {
     opacity: 1;
     transform: translateY(0);
 }
 
-
 /* Estilos para la sección del carrusel */
-/* Estilos para el carrusel */
 #carouselExampleIndicators {
     opacity: 0;
     transform: scale(0.5);
@@ -124,10 +142,12 @@ h1, h2 {
     opacity: 1;
     transform: scale(1);
 }
+
 #carouselSection {
     text-align: center;
     margin-bottom: 2%;
 }
+
 .carousel-item {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -176,11 +196,130 @@ h1, h2 {
 .carousel-indicators li {
     background-color: #000;
 }
+/* Estilos para la sección "Acerca de nosotros" */
+.section-about {
+    padding: 50px 0;    
+}
+
+.section-about .aboutus-text h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.section-about .aboutus-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 20px;
+}
+/* Estilos para la animación de entrada */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.animate__fadeInRight {
+    animation-name: fadeInRight;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilos para los servicios */
+#services {
+    padding: 80px 0;
+}
+
+.service-card {
+    background-color: #4f565f0d;
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.252);
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Añadido el efecto de transición para el color de fondo */
+    margin-bottom: 30px;
+    height: 500px; /* Establecer una altura fija para todos los service-card */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: #2652741b; /* Cambiado el color de fondo al hacer hover */
+}
+
+.service-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-img img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 30px;
+}
+
+.service-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.service-description {
+    color: #555;
+}
+/* Estilos para la animación de las tarjetas */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.service-card {
+    /* Otros estilos existentes */
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-card.animate {
+    animation: fadeInScale 0.5s ease forwards;
+}
+
 
 /* Estilos para la sección de contacto */
 #contacto {
     margin-bottom: 10%;
 }
+
 #contact {
     font-size: 26px;
 }
@@ -207,7 +346,6 @@ iframe {
     padding: 5px;
 }
 
-
 .btn-primary {
     background-color: black;
     border-color: black;
@@ -219,6 +357,12 @@ iframe {
 }
 
 /* Estilos para los servicios */
+#services {
+    margin-top: 30px !important;
+}
+#services h6 {
+    margin-bottom: 40px;
+}
 .service-box i {
     transition: transform 0.3s ease;
 }
@@ -241,10 +385,12 @@ iframe {
 #services .service-box:hover {
     transform: translateY(-10px);
 }
+
 #services .service-box i {
     margin-bottom: 15px;
     color: #353535ca;
 }
+
 /* Estilos para los botones con transición suave */
 .btn-primary {
     background-color: black;
@@ -258,6 +404,7 @@ iframe {
     border-color: #000;
     color: #fff; /* Cambia el color del texto al pasar el cursor */
 }
+
 /* Estilos para el efecto de sombra al hacer clic en los botones */
 .btn-primary:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic */
@@ -267,18 +414,12 @@ iframe {
 #segurosid {
     margin-bottom: 10%;
 }
-#aboutusid {
-    margin-bottom: 10%;
-}
 
 .imgseguros {
     margin-top: 30px;
 }
 
-.aboutusimg {
-    margin-top: 70px;
-    border-radius: 50px;
-}
+
 /* Agregamos la animación a las imágenes */
 .img-fluid {
     opacity: 0;
@@ -290,6 +431,111 @@ iframe {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Estilos para los botones flotantes */
+/* Estilos iniciales para la animación */
+.floating-button {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.floating-button {
+    background-color: #000;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.floating-button .tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    right: 60px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.floating-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.floating-button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+/* Específicos de cada botón */
+.floating-button.whatsapp {
+    background-color: #25D366;
+}
+
+.floating-button.instagram {
+    background-color: #E4405F;
+}
+
+.floating-button.email {
+    background-color: #000;
+}
+
+.floating-button.whatsapp:hover {
+    background-color: #1EBE53;
+}
+
+.floating-button.instagram:hover {
+    background-color: #D73352;
+}
+
+.floating-button.email:hover {
+    background-color: #333;
+}
+
+/* Estilos para los íconos */
+.floating-button i {
+    font-size: 24px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .floating-buttons {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .floating-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .floating-button i {
+        font-size: 20px;
+    }
+}
+
 
 /* Estilos para el pie de página */
 footer {
@@ -310,17 +556,21 @@ footer {
     .navbar {
         height: auto;
     }
+
     .navbar-brand img {
         max-width: 55%;
         height: auto;
     }
+
     section {
         margin-bottom: 1%;
     }
+
     #banner img {
         max-width: 100%;
         height: auto;
     }
+
     iframe {
         width: 100%;
         height: auto;
@@ -338,24 +588,47 @@ footer {
         margin-top: auto;
         border-radius: 10px;
     }
+
     #carouselSection {
         margin-bottom: 10%;
     }
+
     .img-fluid {
         opacity: 1;
         transform: none;
         transition: none;
     }
+
     #segurosid {
         margin-bottom: 15%;
     }
+
     .imgseguros {
         border-radius: 10px;
         margin-top: 10px;
         padding: 4%;
     }
+
     #aboutusid {
         margin-bottom: 15%;
         margin-top: 15px;
     }
+}
+
+@media (max-width: 500px) {
+    .hero-content h1 {
+        font-size: calc(100vw / 10); /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+
+    .hero-content h3 {
+        font-size: calc(100vw / 20); /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+    .aboutusimg {
+        margin-top: 110px;
+        border-radius: 10px;
+    }
+    .floating-buttons {
+        position: fixed;
+        right: 20px;
+        bottom: 80px;
 }
