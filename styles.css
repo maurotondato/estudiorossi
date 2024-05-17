@@ -11,12 +11,11 @@ header {
     transition: transform 0.3s ease; /* Agregamos una transición para una animación suave */
     z-index: 1000; /* Asegúrate de que el encabezado esté en la capa superior */
 }
+
 /* Estilos para la sección debajo del encabezado */
 .content-wrap {
     padding-top: 110px; /* Ajustamos el padding-top para que coincida con la altura del encabezado */
 }
-
-
 
 header::after {
     content: "";
@@ -60,10 +59,12 @@ body {
     min-height: 100vh;
     font-family: 'Roboto', sans-serif; /* Cambio de fuente */
 }
+
 /* Estilos para el contenido de las secciones */
 section {
     margin-top: 110px; /* Ajusta el valor según sea necesario */
 }
+
 /* Animaciones para títulos y texto */
 @keyframes fadeIn {
     from {
@@ -213,6 +214,7 @@ h1, h2 {
     color: #666;
     margin-bottom: 20px;
 }
+
 /* Estilos para la animación de entrada */
 .animate__animated {
     animation-duration: 1s;
@@ -291,6 +293,7 @@ h1, h2 {
 .service-description {
     color: #555;
 }
+
 /* Estilos para la animación de las tarjetas */
 @keyframes fadeInScale {
     0% {
@@ -313,7 +316,6 @@ h1, h2 {
 .service-card.animate {
     animation: fadeInScale 0.5s ease forwards;
 }
-
 
 /* Estilos para la sección de contacto */
 #contacto {
@@ -360,9 +362,11 @@ iframe {
 #services {
     margin-top: 30px !important;
 }
+
 #services h6 {
     margin-bottom: 40px;
 }
+
 .service-box i {
     transition: transform 0.3s ease;
 }
@@ -409,17 +413,6 @@ iframe {
 .btn-primary:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega una sombra al hacer clic */
 }
-
-/* Estilos para las imágenes de seguros */
-#segurosid {
-    margin-bottom: 10%;
-}
-
-.imgseguros {
-    margin-top: 30px;
-}
-
-
 /* Agregamos la animación a las imágenes */
 .img-fluid {
     opacity: 0;
@@ -603,12 +596,6 @@ footer {
         margin-bottom: 15%;
     }
 
-    .imgseguros {
-        border-radius: 10px;
-        margin-top: 10px;
-        padding: 4%;
-    }
-
     #aboutusid {
         margin-bottom: 15%;
         margin-top: 15px;
@@ -636,5 +623,4 @@ footer {
     section {
         margin-top: 17%; /* Ajusta el valor según sea necesario */
     }
-    
 }
