@@ -623,12 +623,18 @@ footer {
     .hero-content h3 {
         font-size: calc(100vw / 20); /* Ajusta el tamaño de la fuente para pantallas pequeñas */
     }
-    .aboutusimg {
-        margin-top: 110px;
-        border-radius: 10px;
-    }
+
     .floating-buttons {
         position: fixed;
         right: 20px;
         bottom: 80px;
+    }
+    #aboutusid {
+        margin-bottom: 15%;
+        margin-top: 60px;
+    }
+    section {
+        margin-top: 17%; /* Ajusta el valor según sea necesario */
+    }
+    
 }
