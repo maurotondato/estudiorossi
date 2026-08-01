@@ -7,7 +7,7 @@
   <meta name="description" content="Cotizá tu seguro de Vida, Auto u Hogar con Augusto Rossi, Productor Asesor de Seguros matriculado (Mat. 82652), exclusivo de Federación Patronal Seguros S.A.">
   <meta name="keywords" content="seguros brandsen, seguro de vida, seguro de auto, seguro de hogar, federación patronal, productor asesor de seguros">
   <link rel="canonical" href="https://estudiorossi.com.ar/products.html">
-  <meta name="theme-color" content="#0b0f17">
+  <meta name="theme-color" content="#0a0e17">
 
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -20,13 +20,14 @@
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="Seguros de Vida, Auto y Hogar | Estudio Rossi">
   <meta property="og:description" content="Cotizá tu seguro de Vida, Auto u Hogar con un Productor Asesor de Seguros matriculado, exclusivo de Federación Patronal Seguros S.A.">
-  <meta property="og:image" content="https://estudiorossi.com.ar/images/seguro-hogar.jpg">
+  <meta property="og:image" content="https://estudiorossi.com.ar/images/ba-recoleta.jpg">
   <meta property="og:url" content="https://estudiorossi.com.ar/products.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Seguros de Vida, Auto y Hogar | Estudio Rossi">
   <meta name="twitter:description" content="Cotizá tu seguro con un Productor Asesor de Seguros matriculado.">
 
   <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fraunces-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,8 +37,8 @@
     <div class="container header-inner">
       <a class="brand" href="index.html">
         <picture>
-          <source srcset="images/logo.webp" type="image/webp">
-          <img src="images/logo.png" width="42" height="42" alt="" loading="eager">
+          <source srcset="images/brand-mark.webp" type="image/webp">
+          <img src="images/brand-mark.png" width="38" height="38" alt="" loading="eager">
         </picture>
         <span class="brand-text">Estudio Rossi<small>Jurídico &amp; Seguros</small></span>
       </a>
@@ -61,26 +62,36 @@
   </header>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
+    <section class="hero grain">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source srcset="images/ba-recoleta.webp" type="image/webp">
+          <img class="parallax" data-speed="0.12" src="images/ba-recoleta.jpg" width="1800" height="1200" alt="" fetchpriority="high">
+        </picture>
+        <div class="hero-scrim"></div>
+      </div>
+      <div class="container hero-content">
         <p class="eyebrow reveal">Seguros</p>
-        <h1 class="reveal">Seguros pensados para tu tranquilidad</h1>
+        <h1 class="reveal">Protección <em>real</em>, sin sorpresas.</h1>
         <p class="lead reveal">Augusto Rossi — Productor Asesor de Seguros (Mat. 82652), exclusivo de Federación Patronal Seguros S.A.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-whatsapp btn-lg" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20cotizar%20un%20seguro.">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-whatsapp"></use></svg>
+            Cotizar por WhatsApp
+          </a>
+          <a class="btn btn-outline-invert btn-lg" href="#planes">Ver seguros</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="planes">
       <div class="container">
         <div class="product-grid">
           <article class="product-card reveal" id="vida">
-            <div class="product-media">
-              <picture>
-                <source srcset="images/seguro-vida.webp" type="image/webp">
-                <img src="images/seguro-vida.jpg" width="900" height="900" loading="lazy" alt="Familia protegida representando el seguro de vida">
-              </picture>
+            <div class="product-tile tile-vida">
+              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-heart"></use></svg>
             </div>
             <div class="product-body">
-              <span class="product-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-heart"></use></svg></span>
               <h3>Seguro de Vida</h3>
               <p>Protegé a tu familia ante lo inesperado, con una cobertura pensada para darles estabilidad.</p>
               <a class="btn btn-whatsapp" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20Vida.">
@@ -91,14 +102,10 @@
           </article>
 
           <article class="product-card reveal" id="auto">
-            <div class="product-media">
-              <picture>
-                <source srcset="images/seguro-auto.webp" type="image/webp">
-                <img src="images/seguro-auto.jpg" width="900" height="900" loading="lazy" alt="Apretón de manos frente a un automóvil representando el seguro de auto">
-              </picture>
+            <div class="product-tile tile-auto">
+              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-car"></use></svg>
             </div>
             <div class="product-body">
-              <span class="product-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-car"></use></svg></span>
               <h3>Seguro de Auto</h3>
               <p>Circulá con tranquilidad: cobertura para tu vehículo ante accidentes, robo y responsabilidad civil.</p>
               <a class="btn btn-whatsapp" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20Auto.">
@@ -109,14 +116,10 @@
           </article>
 
           <article class="product-card reveal" id="hogar">
-            <div class="product-media">
-              <picture>
-                <source srcset="images/seguro-hogar.webp" type="image/webp">
-                <img src="images/seguro-hogar.jpg" width="900" height="900" loading="lazy" alt="Manos protegiendo una maqueta de casa representando el seguro de hogar">
-              </picture>
+            <div class="product-tile tile-hogar">
+              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-home"></use></svg>
             </div>
             <div class="product-body">
-              <span class="product-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-home"></use></svg></span>
               <h3>Seguro de Hogar</h3>
               <p>Protegé tu casa y tus bienes más preciados ante incendio, robo y otros imprevistos.</p>
               <a class="btn btn-whatsapp" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20cotizar%20un%20seguro%20de%20Hogar.">
@@ -132,7 +135,8 @@
     <section class="section section-alt" aria-labelledby="porque-title">
       <div class="container">
         <div class="section-head reveal">
-          <h2 id="porque-title" class="section-title">¿Por qué elegirnos?</h2>
+          <p class="eyebrow">Por qué elegirnos</p>
+          <h2 id="porque-title" class="section-title">Respaldo con nombre y matrícula</h2>
         </div>
         <div class="trust-strip reveal-group">
           <div class="trust-item reveal">
@@ -158,7 +162,8 @@
     <section class="section" aria-labelledby="faq-title">
       <div class="container">
         <div class="section-head reveal">
-          <h2 id="faq-title" class="section-title">Preguntas frecuentes</h2>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 id="faq-title" class="section-title">Todo lo que necesitás saber</h2>
         </div>
         <div class="accordion">
           <div class="accordion-item">
@@ -239,8 +244,8 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <picture>
-          <source srcset="images/logo.webp" type="image/webp">
-          <img src="images/logo.png" width="44" height="44" alt="Estudio Rossi" loading="lazy">
+          <source srcset="images/brand-mark.webp" type="image/webp">
+          <img src="images/brand-mark.png" width="40" height="40" alt="Estudio Rossi" loading="lazy">
         </picture>
         <p>Estudio jurídico y correduría de seguros en Coronel Brandsen, Buenos Aires. Asesoramiento legal y seguros bajo un mismo techo.</p>
         <div class="social-links">
@@ -283,6 +288,7 @@
     </div>
     <div class="footer-bottom container">
       <p>&copy; <span id="year">2026</span> Estudio Rossi. Todos los derechos reservados.</p>
+      <p class="credits">Fotografía: <a href="https://commons.wikimedia.org/wiki/File:Palacio_de_Tribunales_Plaza_Lavalle.jpg" target="_blank" rel="noopener">Palacio de Tribunales</a> por Roger Schultz (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_-_Recoleta,_Buenos_Aires.jpg" target="_blank" rel="noopener">Recoleta, Buenos Aires</a> por Ricardo Patiño (CC BY-SA 2.0), vía Wikimedia Commons.</p>
     </div>
   </footer>
 

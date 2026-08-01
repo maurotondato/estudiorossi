@@ -67,6 +67,32 @@
     }, { passive: true });
   }
 
+  function initParallax() {
+    if (prefersReducedMotion) return;
+    var els = document.querySelectorAll('.parallax');
+    if (!els.length) return;
+    var ticking = false;
+
+    function update() {
+      els.forEach(function (el) {
+        var host = el.closest('.hero, .ba-band') || el.parentElement;
+        var rect = host.getBoundingClientRect();
+        var speed = parseFloat(el.dataset.speed || '0.12');
+        var offset = rect.top * speed;
+        el.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0)';
+      });
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }, { passive: true });
+    update();
+  }
+
   function initReveal() {
     var items = document.querySelectorAll('.reveal');
     if (!items.length) return;
@@ -135,6 +161,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
     initHeaderScroll();
+    initParallax();
     initReveal();
     initAccordion();
     initYear();
