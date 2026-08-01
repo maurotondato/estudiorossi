@@ -1,84 +1,226 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="rossi, abogado, estudio, juridico, penales, accidentes, laborales, brandsen, la plata, judicial, comercial, contratos, seguros">
-        <title> Estudio Rossi - Inicio</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="shortcut icon" href="images/favicon.ICO" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    </head>
-<body>
-    <header class="header-hidden">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-custom-black">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.jpeg" alt="Logo de la Tienda"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="products.html">Seguros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="aboutus.html">Quienes Somos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiénes Somos | Estudio Rossi</title>
+  <meta name="description" content="Conocé al equipo de Estudio Rossi: cinco jóvenes profesionales del derecho y un productor asesor de seguros matriculado, comprometidos con vos en Coronel Brandsen.">
+  <meta name="keywords" content="estudio rossi, equipo, abogados brandsen, augusto rossi, emilio rossi, lucía rossi">
+  <link rel="canonical" href="https://estudiorossi.com.ar/aboutus.html">
+  <meta name="theme-color" content="#0b0f17">
 
-    <section id="aboutusid" class="section-about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="aboutus-text">
-                        <h1 class="animate__animated animate__fadeInUp">Conoce al Equipo</h1>
-                        <p class="animate__animated animate__fadeInUp">
-                            En el Estudio Rossi, nos enorgullece presentarnos como un equipo dinámico y comprometido de profesionales del derecho. Con una pasión compartida por la justicia y una dedicación inquebrantable hacia nuestros clientes, nos esforzamos por ofrecer soluciones legales sólidas y personalizadas en cada caso que abordamos.
-                        </p>
-                        <p class="animate__animated animate__fadeInUp">
-                            Nuestro estudio está formado por cinco jóvenes abogados: Augusto Rossi, Emilio Rossi, Lucía Rossi, Micaela Noirat y Jimena Alcuaz. Estamos unidos por nuestra determinación para defender los derechos y resolver los problemas legales de nuestros clientes con eficacia y dedicación.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="aboutus-image">
-                        <img class="img-fluid rounded-circle animate__animated animate__fadeInRight" src="images/aboutus.jpeg" alt="About us">
-                    </div>
-                </div>
-            </div>
-        </div>
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Estudio Rossi">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Quiénes Somos | Estudio Rossi">
+  <meta property="og:description" content="Conocé al equipo de Estudio Rossi: cinco jóvenes profesionales comprometidos con vos en Coronel Brandsen.">
+  <meta property="og:image" content="https://estudiorossi.com.ar/images/equipo.jpg">
+  <meta property="og:url" content="https://estudiorossi.com.ar/aboutus.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quiénes Somos | Estudio Rossi">
+  <meta name="twitter:description" content="Conocé al equipo de Estudio Rossi en Coronel Brandsen.">
+
+  <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.png" width="42" height="42" alt="" loading="eager">
+        </picture>
+        <span class="brand-text">Estudio Rossi<small>Jurídico &amp; Seguros</small></span>
+      </a>
+      <nav class="nav" id="siteNav" aria-label="Principal">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="products.html">Seguros</a></li>
+          <li><a class="nav-link" href="aboutus.html" aria-current="page">Quiénes somos</a></li>
+          <li><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20Estudio%20Rossi.">Consulta por WhatsApp</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20Estudio%20Rossi.">Consulta por WhatsApp</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú de navegación">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="images/icons.svg#icon-menu"></use></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="images/icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal">Quiénes somos</p>
+        <h1 class="reveal">Un equipo joven, cercano y comprometido</h1>
+        <p class="lead reveal">Cinco profesionales trabajando juntos para acompañarte en lo legal y en tus seguros.</p>
+      </div>
     </section>
 
-    <div class="floating-buttons">
-        <a href="mailto:estudiorossi.brandsen@gmail.com" class="floating-button email" target="_blank">
-            <i class="fas fa-envelope"></i>
-            <span class="tooltip">Email</span>
-        </a>
-        <a href="https://www.instagram.com/estudiorossi" class="floating-button instagram" target="_blank">
-            <i class="fab fa-instagram"></i>
-            <span class="tooltip">Instagram</span>
-        </a>
-        <a href="https://wa.me/+5492223527040" class="floating-button whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip">WhatsApp</span>
-        </a>
-    </div>
-
-    <footer id="footerid" class="py-4 text-white">
-        <div class="container text-center">
-            <p>&copy; 2024 Estudio Rossi</p>
+    <section class="section">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <picture>
+            <source srcset="images/equipo.webp" type="image/webp">
+            <img src="images/equipo.jpg" width="1400" height="937" loading="lazy" alt="Equipo de Estudio Rossi en sus oficinas de Coronel Brandsen">
+          </picture>
         </div>
-    </footer>
+        <div class="about-text reveal">
+          <h2>Conocé al equipo</h2>
+          <p>En Estudio Rossi nos enorgullece ser un equipo dinámico y comprometido de profesionales del derecho. Compartimos la misma pasión por la justicia y la misma dedicación hacia cada cliente: ofrecer soluciones sólidas y personalizadas en cada caso que asumimos.</p>
+          <p>Nuestro estudio está formado por cinco jóvenes profesionales — Augusto Rossi, Emilio Rossi, Lucía Rossi, Micaela Noirat y Jimena Alcuaz — unidos por la determinación de defender tus derechos y resolver tus problemas legales con eficacia y cercanía. Augusto Rossi es además Productor Asesor de Seguros matriculado (Mat. 82652), exclusivo de Federación Patronal Seguros S.A.</p>
+        </div>
+      </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="script.js"></script>
+    <section class="section section-alt" aria-labelledby="equipo-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="equipo-title" class="section-title">Nuestro equipo</h2>
+        </div>
+        <div class="team-grid reveal-group">
+          <div class="team-card reveal">
+            <span class="avatar-initials" aria-hidden="true">AR</span>
+            <div><h3>Augusto Rossi</h3><p>Abogado · Productor Asesor de Seguros</p></div>
+          </div>
+          <div class="team-card reveal">
+            <span class="avatar-initials" aria-hidden="true">ER</span>
+            <div><h3>Emilio Rossi</h3><p>Abogado</p></div>
+          </div>
+          <div class="team-card reveal">
+            <span class="avatar-initials" aria-hidden="true">LR</span>
+            <div><h3>Lucía Rossi</h3><p>Abogada</p></div>
+          </div>
+          <div class="team-card reveal">
+            <span class="avatar-initials" aria-hidden="true">MN</span>
+            <div><h3>Micaela Noirat</h3><p>Abogada</p></div>
+          </div>
+          <div class="team-card reveal">
+            <span class="avatar-initials" aria-hidden="true">JA</span>
+            <div><h3>Jimena Alcuaz</h3><p>Abogada</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="valores-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="valores-title" class="section-title">Nuestros valores</h2>
+        </div>
+        <div class="values-grid reveal-group">
+          <div class="value-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-shield-check"></use></svg>
+            <h3>Compromiso</h3>
+            <p>Trabajamos con dedicación en cada caso, como si fuera el único.</p>
+          </div>
+          <div class="value-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-users"></use></svg>
+            <h3>Cercanía</h3>
+            <p>Te explicamos cada paso en un lenguaje claro, sin tecnicismos innecesarios.</p>
+          </div>
+          <div class="value-card reveal">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-award"></use></svg>
+            <h3>Transparencia</h3>
+            <p>Sin letra chica: sabés en todo momento en qué está tu caso o tu póliza.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container cta-band-inner reveal">
+        <h2>¿Querés conocernos mejor?</h2>
+        <p>Escribinos y coordinamos una consulta.</p>
+        <div class="hero-actions">
+          <a class="btn btn-whatsapp btn-lg" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20Estudio%20Rossi.">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-whatsapp"></use></svg>
+            Escribir por WhatsApp
+          </a>
+          <a class="btn btn-outline-invert btn-lg" href="contact.html">Ir a Contacto</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="images/logo.webp" type="image/webp">
+          <img src="images/logo.png" width="44" height="44" alt="Estudio Rossi" loading="lazy">
+        </picture>
+        <p>Estudio jurídico y correduría de seguros en Coronel Brandsen, Buenos Aires. Asesoramiento legal y seguros bajo un mismo techo.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/estudiorossi" target="_blank" rel="noopener" aria-label="Instagram de Estudio Rossi">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-instagram"></use></svg>
+          </a>
+          <a href="https://wa.me/5492223527040" target="_blank" rel="noopener" aria-label="WhatsApp de Estudio Rossi">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-whatsapp"></use></svg>
+          </a>
+          <a href="mailto:estudiorossi.brandsen@gmail.com" aria-label="Enviar email a Estudio Rossi">
+            <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-mail"></use></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Navegación del sitio">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="products.html">Seguros</a></li>
+          <li><a href="aboutus.html">Quiénes somos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4>Seguros</h4>
+        <ul>
+          <li><a href="products.html#vida">Seguro de Vida</a></li>
+          <li><a href="products.html#auto">Seguro de Auto</a></li>
+          <li><a href="products.html#hogar">Seguro de Hogar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-phone"></use></svg><a href="tel:+542223527040">+54 2223 52-7040</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-mail"></use></svg><a href="mailto:estudiorossi.brandsen@gmail.com">estudiorossi.brandsen@gmail.com</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-map-pin"></use></svg><span>Las Heras 843, Coronel Brandsen, Buenos Aires</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; <span id="year">2026</span> Estudio Rossi. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <div class="fab-dock" aria-label="Contacto rápido">
+    <a class="fab fab-email" href="mailto:estudiorossi.brandsen@gmail.com" aria-label="Enviar email">
+      <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-mail"></use></svg>
+      <span class="fab-tooltip" aria-hidden="true">Email</span>
+    </a>
+    <a class="fab fab-instagram" href="https://www.instagram.com/estudiorossi" target="_blank" rel="noopener" aria-label="Abrir Instagram">
+      <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-instagram"></use></svg>
+      <span class="fab-tooltip" aria-hidden="true">Instagram</span>
+    </a>
+    <a class="fab fab-whatsapp" href="https://wa.me/5492223527040?text=Hola%2C%20quiero%20hacer%20una%20consulta%20con%20Estudio%20Rossi." target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+      <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-whatsapp"></use></svg>
+      <span class="fab-tooltip" aria-hidden="true">WhatsApp</span>
+    </a>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
