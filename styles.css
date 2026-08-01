@@ -120,7 +120,7 @@ h3 { font-size: var(--fs-h3); font-family: var(--font-sans); font-weight: 700; l
 em { font-style: italic; color: inherit; }
 p { color: var(--text-soft); }
 a { color: inherit; text-decoration: none; }
-ul { list-style: none; padding: 0; }
+ul, ol { list-style: none; padding: 0; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 input, textarea { font: inherit; color: inherit; }
 label { font-weight: 600; font-size: var(--fs-small); color: var(--text); }
@@ -197,6 +197,8 @@ main { display: block; }
   }
   .reveal { opacity: 1; transform: none; filter: none; }
   .parallax { transform: none !important; }
+  .hero-content h1.reveal { clip-path: none !important; }
+  .hero-media { animation: none !important; transform: none !important; }
 }
 
 /* ---------- Buttons ---------- */
@@ -295,16 +297,49 @@ main { display: block; }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; color: #fff; overflow: hidden; isolation: isolate; }
-.hero-media { position: absolute; inset: -6% 0; z-index: 0; }
+.hero-media {
+  position: absolute; inset: -6% 0; z-index: 0;
+  animation: hero-kenburns 20s var(--ease-soft) both;
+}
 .hero-media img { width: 100%; height: 100%; object-fit: cover; }
 .hero-media img.pos-low { object-position: 50% 78%; }
 .hero-media img.pos-high { object-position: 50% 15%; }
+@keyframes hero-kenburns {
+  from { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
 .hero-scrim {
   position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(120deg, rgba(6, 10, 19, .96) 6%, rgba(6, 10, 19, .82) 45%, rgba(15, 27, 51, .55) 100%);
 }
 .hero-content { position: relative; z-index: 2; padding-block: var(--space-2xl) var(--space-xl); max-width: 780px; }
 .hero h1 { color: #fff; margin-bottom: var(--space-sm); }
+
+/* Hero entrance choreography — CSS-driven (not scroll-dependent) so the
+   first, above-the-fold impression always plays consistently on load. */
+.hero-content .eyebrow.reveal,
+.hero-content .lead.reveal,
+.hero-content .hero-actions.reveal {
+  opacity: 0; transform: translateY(22px); filter: blur(5px);
+  animation: hero-rise .9s var(--ease-soft) forwards;
+}
+.hero-content .eyebrow.reveal { animation-delay: .15s; }
+.hero-content h1.reveal { animation-delay: .35s; }
+.hero-content .lead.reveal { animation-delay: .65s; }
+.hero-content .hero-actions.reveal { animation-delay: .85s; }
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(22px); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.hero-content h1.reveal {
+  opacity: 1; transform: none; filter: none;
+  clip-path: inset(-10% 100% -10% 0);
+  animation: hero-wipe 1.05s var(--ease) forwards;
+}
+@keyframes hero-wipe {
+  from { clip-path: inset(-10% 100% -10% 0); }
+  to { clip-path: inset(-10% 0 -10% 0); }
+}
 .hero h1 em { color: var(--brass-light); font-style: italic; }
 .hero .lead { color: var(--text-on-dark-soft); margin-bottom: var(--space-md); max-width: 56ch; font-size: var(--fs-lead); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -376,22 +411,17 @@ main { display: block; }
 @media (min-width: 860px) { .split-grid { grid-template-columns: 1fr 1fr; } }
 
 /* ---------- Timeline steps ---------- */
-.steps { display: grid; gap: var(--space-lg) var(--space-md); grid-template-columns: 1fr; position: relative; }
-.step { position: relative; padding-left: 2.4rem; }
-.step::before {
-  content: ''; position: absolute; left: 0; top: .3rem; width: 10px; height: 10px; border-radius: 50%;
-  background: var(--brass); box-shadow: 0 0 0 4px rgba(169, 130, 76, .18);
+.steps { display: grid; gap: var(--space-lg) var(--space-md); grid-template-columns: 1fr; }
+.step { position: relative; padding-top: var(--space-sm); }
+.step-num {
+  display: block; font-family: var(--font-serif); font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+  font-weight: 600; line-height: 1; color: var(--brass-light);
+  -webkit-text-stroke: 1px var(--brass); margin-bottom: .6rem;
 }
-.step::after { content: ''; position: absolute; left: 4px; top: 1.1rem; bottom: -2.2rem; width: 1px; background: var(--border-dark); }
-.step:last-child::after { display: none; }
-.step-num { display: block; font-family: var(--font-serif); font-size: 1rem; font-weight: 600; color: var(--brass-light); margin-bottom: .35rem; letter-spacing: .04em; }
+.section-dark .step-num { color: transparent; -webkit-text-stroke: 1px var(--brass-light); }
 .step h3 { margin-bottom: .4rem; font-family: var(--font-serif); font-weight: 600; font-size: 1.2rem; }
 .section-dark .step h3 { color: #fff; }
-@media (min-width: 860px) {
-  .steps { grid-template-columns: repeat(3, 1fr); }
-  .step::after { right: -1.6rem; left: auto; top: 4px; bottom: auto; width: calc(100% + 1.6rem - 10px); height: 1px; }
-  .step:last-child::after { display: none; }
-}
+@media (min-width: 860px) { .steps { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------- Product tiles (Seguros — custom illustration, no stock photos) ---------- */
 .product-grid { display: grid; gap: var(--space-md); grid-template-columns: 1fr; }
