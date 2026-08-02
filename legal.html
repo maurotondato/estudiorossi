@@ -25,10 +25,34 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Áreas de Práctica Legal | Estudio Rossi">
   <meta name="twitter:description" content="Consultoría legal, accidentes de tránsito y derecho laboral en Coronel Brandsen.">
+  <meta name="twitter:image" content="https://estudiorossi.com.ar/images/ba-tribunales.jpg">
 
   <link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/fraunces-var-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://estudiorossi.com.ar/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Legal", "item": "https://estudiorossi.com.ar/legal.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿La primera consulta tiene costo?", "acceptedAnswer": { "@type": "Answer", "text": "No. La primera consulta para contarnos tu situación no tiene costo." } },
+      { "@type": "Question", "name": "¿Qué documentación necesito llevar?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tipo de caso. Contános tu situación por WhatsApp y te decimos exactamente qué necesitamos revisar." } },
+      { "@type": "Question", "name": "¿Cómo es la primera consulta?", "acceptedAnswer": { "@type": "Answer", "text": "Como prefieras: por WhatsApp, por email o en persona en nuestra sede de Coronel Brandsen." } },
+      { "@type": "Question", "name": "¿Cuánto tarda un proceso legal?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tipo de caso y de la instancia en la que se encuentre. Te damos un panorama realista apenas evaluamos tu situación puntual." } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -90,7 +114,12 @@
         <div class="product-grid">
           <article class="product-card reveal" id="consultoria">
             <div class="product-tile tile-legal">
-              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-scale"></use></svg>
+              <svg class="icon pictogram" aria-hidden="true" viewBox="0 0 64 64">
+                <path d="M32 18 C26 14 16 12 8 14 V46 C16 44 26 46 32 50 C38 46 48 44 56 46 V14 C48 12 38 14 32 18 Z"/>
+                <path d="M32 18 V50"/>
+                <path d="M14 22 H24 M14 28 H24 M14 34 H22" opacity=".6"/>
+                <path d="M40 22 H50 M40 28 H50 M42 34 H50" opacity=".6"/>
+              </svg>
             </div>
             <div class="product-body">
               <h3>Consultoría Legal Integral</h3>
@@ -105,8 +134,11 @@
           </article>
 
           <article class="product-card reveal" id="transito">
-            <div class="product-tile tile-auto">
-              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-car"></use></svg>
+            <div class="product-tile is-photo">
+              <picture>
+                <source srcset="images/ba-transito.webp" type="image/webp">
+                <img src="images/ba-transito.jpg" width="1200" height="825" loading="lazy" alt="Tránsito nocturno en la Ciudad de Buenos Aires">
+              </picture>
             </div>
             <div class="product-body">
               <h3>Accidentes de Tránsito</h3>
@@ -122,7 +154,12 @@
 
           <article class="product-card reveal" id="laboral">
             <div class="product-tile tile-legal">
-              <svg class="icon" aria-hidden="true"><use href="images/icons.svg#icon-briefcase"></use></svg>
+              <svg class="icon pictogram" aria-hidden="true" viewBox="0 0 64 64">
+                <path d="M12 24 H52 A2 2 0 0 1 54 26 V48 A2 2 0 0 1 52 50 H12 A2 2 0 0 1 10 48 V26 A2 2 0 0 1 12 24 Z"/>
+                <path d="M24 24 V18 A4 4 0 0 1 28 14 H36 A4 4 0 0 1 40 18 V24"/>
+                <path d="M10 35 H54"/>
+                <path d="M29 31 H35 V38 H29 Z" opacity=".8"/>
+              </svg>
             </div>
             <div class="product-body">
               <h3>Derecho Laboral</h3>
@@ -288,7 +325,7 @@
     </div>
     <div class="footer-bottom container">
       <p>&copy; <span id="year">2026</span> Estudio Rossi. Todos los derechos reservados.</p>
-      <p class="credits">Fotografía: <a href="https://commons.wikimedia.org/wiki/File:Palacio_de_Tribunales_Plaza_Lavalle.jpg" target="_blank" rel="noopener">Palacio de Tribunales</a> por Roger Schultz (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_-_Recoleta,_Buenos_Aires.jpg" target="_blank" rel="noopener">Recoleta, Buenos Aires</a> por Ricardo Patiño (CC BY-SA 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Coronel_Brandsen_-_Abril_2023_(2).jpg" target="_blank" rel="noopener">Estación Coronel Brandsen</a> por Hurfer (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Legal_Contract_%26_Signature_-_Warm_Tones.jpg" target="_blank" rel="noopener">Legal Contract</a> por Blogtrepreneur (CC BY 2.0), vía Wikimedia Commons.</p>
+      <p class="credits">Fotografía: <a href="https://commons.wikimedia.org/wiki/File:Palacio_de_Tribunales_Plaza_Lavalle.jpg" target="_blank" rel="noopener">Palacio de Tribunales</a> por Roger Schultz (CC BY 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Aerial_view_-_Recoleta,_Buenos_Aires.jpg" target="_blank" rel="noopener">Recoleta, Buenos Aires</a> por Ricardo Patiño (CC BY-SA 2.0) · <a href="https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Coronel_Brandsen_-_Abril_2023_(2).jpg" target="_blank" rel="noopener">Estación Coronel Brandsen</a> por Hurfer (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Legal_Contract_%26_Signature_-_Warm_Tones.jpg" target="_blank" rel="noopener">Legal Contract</a> por Blogtrepreneur (CC BY 2.0) · <a href="https://www.flickr.com/photos/11755553@N08/6349614121" target="_blank" rel="noopener">Buenos Aires</a> por Néstor Galina (CC BY 2.0), vía Wikimedia Commons / Flickr.</p>
     </div>
   </footer>
 

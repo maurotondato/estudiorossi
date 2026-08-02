@@ -114,6 +114,38 @@
     items.forEach(function (el) { observer.observe(el); });
   }
 
+  function initMagnetic() {
+    if (prefersReducedMotion || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    var els = document.querySelectorAll('[data-magnetic]');
+    els.forEach(function (el) {
+      var strength = parseFloat(el.dataset.magneticStrength || '0.25');
+      var inner = document.createElement('span');
+      inner.className = 'magnetic-inner';
+      while (el.firstChild) inner.appendChild(el.firstChild);
+      el.appendChild(inner);
+      el.classList.add('has-magnetic');
+      var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+
+      function loop() {
+        cx += (tx - cx) * 0.2;
+        cy += (ty - cy) * 0.2;
+        inner.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+        raf = (Math.abs(tx - cx) > 0.1 || Math.abs(ty - cy) > 0.1) ? window.requestAnimationFrame(loop) : null;
+      }
+
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        tx = ((e.clientX - r.left) - r.width / 2) * strength;
+        ty = ((e.clientY - r.top) - r.height / 2) * strength;
+        if (!raf) raf = window.requestAnimationFrame(loop);
+      });
+      el.addEventListener('mouseleave', function () {
+        tx = 0; ty = 0;
+        if (!raf) raf = window.requestAnimationFrame(loop);
+      });
+    });
+  }
+
   function initAccordion() {
     var triggers = document.querySelectorAll('.accordion-trigger');
     triggers.forEach(function (trigger) {
@@ -163,6 +195,7 @@
     initHeaderScroll();
     initParallax();
     initReveal();
+    initMagnetic();
     initAccordion();
     initYear();
     initContactForm();
