@@ -112,6 +112,14 @@
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
     items.forEach(function (el) { observer.observe(el); });
+
+    // Safety net: force-reveal anything the observer never caught (edge-case
+    // viewports, browser quirks) instead of leaving it at opacity 0 forever.
+    window.setTimeout(function () {
+      items.forEach(function (el) {
+        if (!el.classList.contains('is-visible')) el.classList.add('is-visible');
+      });
+    }, 6000);
   }
 
   function initMagnetic() {
@@ -190,14 +198,18 @@
     });
   }
 
+  function safe(fn, name) {
+    try { fn(); } catch (e) { window.console && console.warn('[' + name + ']', e); }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
-    initNav();
-    initHeaderScroll();
-    initParallax();
-    initReveal();
-    initMagnetic();
-    initAccordion();
-    initYear();
-    initContactForm();
+    safe(initNav, 'initNav');
+    safe(initHeaderScroll, 'initHeaderScroll');
+    safe(initParallax, 'initParallax');
+    safe(initReveal, 'initReveal');
+    safe(initMagnetic, 'initMagnetic');
+    safe(initAccordion, 'initAccordion');
+    safe(initYear, 'initYear');
+    safe(initContactForm, 'initContactForm');
   });
 })();
